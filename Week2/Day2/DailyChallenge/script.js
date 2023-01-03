@@ -16,5 +16,6 @@
 
     //5
     $sentence = "The ATOS Bootcamp is not that bad, I like it";
-    $wordBad = sentence.slice(21, 33); // enlever sous chaine "not that bad"
+    //$wordBad = sentence.slice(21, 33); // enlever sous chaine "not that bad"
+   $wordNot = sentence.replace("not that bad", "good");
     console.log($wordBad);
