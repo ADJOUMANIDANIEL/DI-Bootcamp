@@ -13,9 +13,20 @@
     debugger;
 
     const myWatchedSeries = ["black mirror", "money heist", "the big bang theory"];
-    
+    /**
+        Correcteur: Yannick GOUGUIA
+
+      ligne 22: On te demande de retourner la longueur des elements du tableau myWatchedSeries et nom de definir une valeur
+    */
+
     let myWatchedSeriesLength = 3; 
     let myWatchedSeriesSentence = ('J\'ai regardé black mirror');
+
+    /**
+        Correcteur: Yannick GOUGUIA
+
+      ligne 30: il faut afficher les variables
+    */
     console.log('I watched 1 serie : black mirror, money heist, and the big bang theory');
 
     
