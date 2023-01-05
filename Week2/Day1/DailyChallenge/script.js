@@ -21,6 +21,15 @@
     fruits.reverse();
 
 
+     /**
+        Correcteur: Yannick GOUGUIA
+
+        il manque des exercices pour le daily challenge
+        
+        merci de le completer
+    */
+
+
     // EXERCICE 2 //
 
     /*const moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
