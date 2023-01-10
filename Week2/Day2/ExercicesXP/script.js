@@ -1,48 +1,13 @@
+// 1)
+let sentence = "I am not a bad boy";
 
-    //Exercice 2 : Chihuahua
-   
-    //1
-    _newDog = "Chihuahua";
-   
-    //2
-    newDog.length // 9
+let wordNot = sentence.indexOf("not");
 
-    //3
-    _newDog = "Chihuahua";
-    console.log(_newDog.toLowerCase()); 
-    console.log(_newDog.toUpperCase()); 
-     
-    //4
-        if (x > y){
-            alert("X is the biggest number");
-        }
-        else {
-            alert("Y is the biggest number");
-        }
+let wordBad = sentence.indexOf("bad");
 
-
-    // Exercice 4 : Discussion De Groupe
-    const users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
-    users.length // 4;
-   
-    if (users == 0) {
-        users.length // 0;
-        console.log('no one is online');
-    } 
-    else if (users == 1) {
-        users.length // 1;
-        console.log('<name_user> is online');
-    } 
-    else if (users == 2) {
-        users.length // 2;
-        console.log('<name_user> <name_user> is online');
-    } 
-    else if (users >= 2) {
-        users.length // >=2;
-        console.log('name_user1, name_user2 and 3 more are online');
-    } 
-    else {
-        console.log('There are several users');
-    }
-
-    
+if (wordBad > wordNot) {
+    console.log(sentence.replace('not a bad', 'good'));    
+}
+else{
+    console.log(sentence);
+}

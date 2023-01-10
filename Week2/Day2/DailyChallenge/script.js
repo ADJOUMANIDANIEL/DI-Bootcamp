@@ -1,21 +1,13 @@
+// 1)
+let sentence = "I am not a bad boy";
 
-    //1
-    $sentence = "The ATOS Bootcamp is not that bad, I like it";
+let wordNot = sentence.indexOf("not");
 
-    //2
-    $wordNot = sentence.substring(21, 24);
+let wordBad = sentence.indexOf("bad");
 
-    //3
-    $wordBad = sentence.substring(30, 33);
-
-    //4
-    $sentence = "The ATOS Bootcamp is not that bad, I like it";
-    //$wordBad = sentence.slice(25, 29); // enlever sous chaine "that"
-    $wordNot = sentence.replace("not that bad", "good");
-    console.log($wordNot);
-
-    //5
-    $sentence = "The ATOS Bootcamp is not that bad, I like it";
-    //$wordBad = sentence.slice(21, 33); // enlever sous chaine "not that bad"
-   $wordNot = sentence.replace("not that bad", "good");
-    console.log($wordBad);
+if (wordBad > wordNot) {
+    console.log(sentence.replace('not a bad', 'good'));    
+}
+else{
+    console.log(sentence);
+}

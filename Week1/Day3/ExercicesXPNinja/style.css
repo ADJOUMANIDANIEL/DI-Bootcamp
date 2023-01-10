@@ -1,0 +1,79 @@
+
+/* Css pour la prémière étape*/
+.container{
+    display:grid;
+   grid-template-columns: repeat(16,1fr);
+   grid-auto-rows:40px;
+   width:60%;
+   margin:auto;
+   gap:5px;
+   border:solid black 1px;
+  
+    
+}
+.k{
+    box-sizing:border-box;
+    background-color:lightsalmon;
+}
+.m{
+    box-sizing:border-box;
+    background-color:brown;
+}
+.o{
+    box-sizing:border-box;
+    background-color: orange;
+}
+
+/* Css pour la deuxième étape*/
+
+.container2{
+    display:grid;
+    grid-template-columns:repeat(16,1fr);
+    grid-auto-rows: 40px;
+    margin:50px auto;
+    width:60%;
+    border: solid black 1px;
+    gap:5px;
+    
+}
+.gi{
+box-sizing:border-box;
+background-color:gainsboro;
+}
+.gn{
+    box-sizing:border-box;
+    background-color:gray;
+}
+.g{
+    box-sizing:border-box;
+    background-color: rgb(75, 65, 65);
+}
+.gS{
+    box-sizing:border-box;
+    background-color:rgb(17, 13, 13);
+}
+
+/* Css pour la troisième étape*/
+.contour{
+    border:solid black 1px;
+    margin: 50px auto;
+    width:60%;
+}
+.container3{
+    display:grid;
+    grid-template-columns:repeat(16,1fr);
+    grid-auto-rows: 40px;
+    border:groove rgb(245, 89, 89);
+}
+.b{
+box-sizing:border-box;
+background-color:white;
+}
+.r_c{
+    box-sizing:border-box;
+    background-color:rgb(245, 89, 89);
+}
+.r_f{
+    box-sizing:border-box;
+    background-color:rgb(250, 36, 36);
+}

@@ -1,0 +1,89 @@
+body{
+    margin:40px auto;
+    background-size: contain;
+    
+}
+.enveloppe{
+    margin:auto;
+    padding:0px;
+    width:70%;
+    height: 70%;
+    background-color: gainsboro;
+}
+header{
+    display:flex;
+    width:97.5%;
+    margin-top:5px;
+    margin-right:5px;
+    margin-left:5px;
+    margin-bottom: 10px;
+    justify-content:space-between;
+    background-color: gainsboro;
+   
+}
+.img_color{
+    margin-top: 25px;
+    width:150px;
+    height:100px; 
+    background-color: rgb(252, 251, 250);
+    
+}
+.img_color img{
+    width:150px;
+    height:140px;
+}
+.ligne{
+    width:94.5%;
+    margin-right:5px;
+    margin-left:30px;
+    border:solid rgb(204, 198, 198) 1px;
+}
+hr{
+    margin:0px;
+    border:solid red 0.2px;
+}
+.corps{
+    
+    width:97.5%;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 10px;
+    margin-right:5px;
+    margin-bottom:5px;
+    margin-left:5px;
+    background-color: rgb(204, 198, 198) ;        
+}
+.nom{
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.D_H,.D_B,.G_H,.G_B{
+    background-color: gainsboro;
+}
+.icon{
+    margin-top: 10px;
+    margin-left: 5px;
+   display: flex;
+   column-gap: 20px;
+}
+.fa-solid{
+    color: rgb(192, 132, 21);
+}
+h3{
+    margin-left:5px;
+    font-family:sans-serif;
+    letter-spacing: 5px;
+    
+}
+h2{
+    font-weight: bold;
+}
+.s{
+    margin-left:80px;
+}
+
+.marge{
+    
+    margin-left:30px;
+}
+

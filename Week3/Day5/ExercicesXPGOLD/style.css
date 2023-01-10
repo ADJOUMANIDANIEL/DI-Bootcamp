@@ -1,0 +1,141 @@
+/* Style the header with a grey background and some padding */
+
+* {box-sizing: border-box;}
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 10px 5px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 15px;
+  border-radius: 4px;
+}
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+.div1{
+  background-image:url(https://images.pexels.com/photos/1802268/pexels-photo-1802268.jpeg?auto=compress&cs=tinysrgb&w=600);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 1350px;
+  height: 400px;
+  background-color: black;
+
+}
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+.p1{
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.input{
+  text-align: center;
+  margin-top: 100px;
+}
+.input1{
+  padding: 0px;
+  font-size: 40px;
+  border-radius: 6px;
+  border-color: #0080FF;
+}
+button{
+  position: relative;
+  float: right;
+  text-align: center;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 3px;
+  right:350px;
+  border: #0080FF;
+  background-color: dodgerblue
+
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+  
+}
+
+.column2 {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+  background-color:#bbb;
+}
+
+.column3 {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+  background-color:#ccc;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+.row{
+  position: relative;
+  font-size: 20px;
+  height: 50px;
+  width: 800px;
+  left: 200px;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+

@@ -1,75 +1,78 @@
-////////////////////////////////////////////Exercice1//////////////////////////////////////////////////////////////////;
-
+// EXERCICE1 
+// Part I - Review about arrays
 const people = ["Greg", "Mary", "Devon", "James"];
-let supprimer =  people.splice(0, 1)
-let modification= people[2] = "Jason";
-let ajouterFin = people.push("kouakou");
-let position =people.indexOf("Mary");
-let copieTableau = people.slice(1,3);
-let position1 = people.indexOf("Foo");
-let last = people.indexOf(1);
 
-//console.log(people);
-console.log(supprimer);/**['Mary', 'Devon', 'James'] supprime greg */
-console.log(modification);/**['Mary', 'Devon', 'Jason'] remplacer james par jason */
-console.log(ajouterFin);/**['Mary', 'Jason', 'James', 'KOUAKOU']  ajouter KOUAKOU*/
-console.log(position);/**position 0 */
-console.log(copieTableau);/**['Devon', 'Jason'] */
-console.log(position1);/**-1  il met -1 parce qu'il ne trouve pas le mot dans le tableau */ 
-console.log(last);
+//1) Write code to remove “Greg” from the people array.
+people.splice(0, 1);
+console.log(people);
 
-for (let i=0; i<copieTableau.length; i++) {/**Mary Devon Jason kouakou */
-    console.log(people[i]);
+//2) Write code to replace “James” to “Jason”
+people[2]="Jason";
+console.log(people);
+
+//3) Write code to add your name to the end of the people array.
+people.push("Marlin's");
+console.log(people);
+
+//4) Write code that console.logs Mary’s index
+people.indexOf('Mary');
+console.log(people.indexOf('Mary'));
+
+// 5)
+people.slice(1);
+console.log(people.slice(1));
+
+//6) Write code that gives the index of “Foo”.
+people.indexOf("Foo");
+console.log(people.indexOf("Foo"));
+
+//7) Create a variable called last which value is the last element of the array.
+let last = people[2];
+    console.log(last);
+    // the relationship between the index of the last element of the array and the length of the array
+    // Array.length == index.length + 1
+
+    // PART II - LOOPS
+
+//1- Using a loop, iterate through the people array and console.log each person.
+for(let i = 0; i < people.length; i++)
+{
+    console.log(people[i] + "\n");
 }
 
-for (let i = 0; i < people.length; i++) {
-    console.log(people[i]);
-    if(people[i] == "Jason"){
+//2- Using a loop, iterate through the people array and exit the loop after you console.log “Jason”
+for(let i = 0; i < people.length; i++)
+{
+    if (people[i] == "Jason") {
         break;
-    }  
+    }
+    console.log(people[i] + "\n");
 }
 
-////////////////////////////////////////////Exercice2//////////////////////////////////////////////////////////////////;
+// EXERCICE 2 
+const colors = ["green", "blue", "yellow", "red", "orange"];
+for(let color in colors)
+{
+    console.log(`My ${Number(color) + 1} is ${colors[color]}`);
+}
 
-const colors = ["blue", "rouge", "violet", "blanc","marron"];
-const suffixe = ["blue", "rouge", "violet", "blanc","marron"];
+// EXERCICE 3 
 
-for (let i = 0; i < colors.length; i++) {
-    console.log("Mon choix n° " + colors.indexOf("rouge") +" est " +colors[1]);
-    console.log("Mon choix n° " + colors.indexOf("violet") +" est " +colors[2]);
-    console.log("Mon choix n° " + colors.indexOf("blanc") +" est " +colors[3]);
-    console.log("Mon choix n° " + colors.indexOf("marron") +" est " +colors[4]);
-    if (colors.length == colors.length) {
-        break;
+let checker = true;
+while(checker)
+{
+    entry = prompt('Entrer un nombre');
+    type = typeof(entry);
+    console.log(type);
+    number = Number(entry);
+    if(!isNaN(number) && number > 10 )
+    {
+        break
     }
 }
 
-for (let i = 0; i < suffixe.length; i++) {
-    console.log(suffixe.indexOf("rouge") +" Mon choix n° " + suffixe.indexOf("rouge") +" est " +suffixe[1]);
-    console.log(suffixe.indexOf("violet") + " Mon choix n° " + suffixe.indexOf("violet") +" est " +suffixe[2]);
-    console.log(suffixe.indexOf("blanc") +" Mon choix n° " + suffixe.indexOf("blanc") +" est " +suffixe[3]);
-    console.log( suffixe.indexOf("marron")+" Mon choix n° " + suffixe.indexOf("marron") +" est " +suffixe[4]);
-    if (suffixe.length == suffixe.length) {
-        break;
-    } 
-}
-
-
-////////////////////////////////////////////Exercice3//////////////////////////////////////////////////////////////////;
-
-let saisie;
-do{
-    saisie =prompt("saisie un numero"); 
-    if (saisie < 10) {
-       console.log("recommencez svp "); 
-    }else{
-        console.log("merci vous avez saisie "+ typeof(saisie)  + " un nombre superieur a 10 bravo");
-    }
-}
-while (!saisie);
-
-
-////////////////////////////////////////////Exercice4//////////////////////////////////////////////////////////////////;
+// EXERCICE 4
+// 1) 
 const building = {
     numberOfFloors: 4,
     numberOfAptByFloor: {
@@ -85,68 +88,64 @@ const building = {
         david: [1, 500],
     },
 }
-let nombreNumberOfFloors= building.numberOfFloors;
-let nombreFirstFloor = building.numberOfAptByFloor.firstFloor;
-let nombreThirdFloor = building.numberOfAptByFloor.thirdFloor;
-let nomDeuxiemeLocataire = building.nameOfTenants[2];
-let davi = building.numberOfRoomsAndRent.david[0];
-let sommeSaraDavid = building.numberOfRoomsAndRent.sarah[1] + building.numberOfRoomsAndRent.david[1]
-let sommeDan = building.numberOfRoomsAndRent.dan[1];
 
-console.log(nombreNumberOfFloors);/**4 */
-console.log("étages 1 nous avons " + nombreFirstFloor + " appartements ");/**étages 1 nous avons 3 appartements  */
-console.log("étages 3 nous avons " + nombreThirdFloor + " appartements ");/** étages 3 nous avons 9 appartements */
-console.log(nomDeuxiemeLocataire);
-console.log(" le nom du deuxième locataire est " + nomDeuxiemeLocataire + " et le nombre de pièces qu'il possède dans son appartement est " + davi);
-console.log("la somme du loyer de Sarah et de David est " + sommeSaraDavid);
-console.log("la somme du loyer de Dan est "+ sommeDan);
+//2) Console.log the number of floors in the building.
+console.log(building.numberOfFloors);
 
-if (sommeSaraDavid > sommeDan) {
-    let nouveauSoldeDan = sommeDan + 1200;
-    console.log("la somme du nouveau loyer de Dan est " + nouveauSoldeDan);
-}else{
-    console.log("la somme du loyer de Sarah et de David est inferieur a celui de Dan");
+//3) Console.log how many apartments are on the floors 1 and 3.
+console.log(building.numberOfAptByFloor.firstFloor);
+console.log(building.numberOfAptByFloor.thirdFloor);
+
+//4) Console.log the name of the second tenant and the number of rooms he has in his apartment.
+console.log(building.nameOfTenants[1]);
+
+//5) Check if the sum of Sarah’s and David’s rent is bigger than Dan’s rent. If it is, than increase Dan’s rent to 1200.
+ sarahAndDavidRent = building.numberOfRoomsAndRent.sarah[1] + building.numberOfRoomsAndRent.david[1];
+ danRent = building.numberOfRoomsAndRent.dan[1];
+ if (sarahAndDavidRent > danRent) {
+    danRent += 1200
 }
 
-////////////////////////////////////////////Exercice5//////////////////////////////////////////////////////////////////;
+// EXERCICE 5 
+//1) Create an object called family with a few key value pairs.
+const family = {
+    firstName : "KONE",
+    lastName : "ISMAEL"
+}
 
-const person = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 50,
-    eyeColor: "blue"
-  };
+//2) Using a for in loop, console.log the keys of the object.
+for(let elt in family)
+{
+    console.log(elt);
+}
 
-  for (let x in person) {
-    console.log("les clés de l'objet sont " + x) //fname lname age
-    //console.log(person[x]) // John Doe 25
-  }
+//3) Using a for in loop, console.log the values of the object
+for(let elt in family)
+{
+    console.log(family[elt]);
+}
 
-  for (let x in person) {
-    console.log("les valeurs de l'objet sont "+ person[x]) // John Doe 25
-  }
-
-////////////////////////////////////////////Exercice6//////////////////////////////////////////////////////////////////;
-
+// EXERCICE 6 
 const details = {
-    my: 'name ',
-    is: 'Rudolf ',
+    my: 'name',
+    is: 'Rudolf',
     the: 'raindeer'
-  }
+}
 
-  let test = "";
-  for(let x in details){
-    test +=x+' '+ details[x] + ' ';
-  }
-  console.log(test);
+//1) Given the object above and using a for loop, console.log “my name is Rudolf the raindeer”
+let text = "";
+for(let detail in details)
+{
+    text += detail + ' ' + details[detail] + ' ';
+}
+console.log(text);
 
-////////////////////////////////////////////Exercice7//////////////////////////////////////////////////////////////////;
-  const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
-
-  let alphabet = names.sort();
-  let societeSecret = "";
-    for (let i of names) {
-    societeSecret += i[0];
-    }
-    console.log(alphabet);/**['Amanda', 'Bernard', 'Jack', 'Kyle', 'Philip', 'Sarah'] */
-    console.log("le nom de la societé est: "+ societeSecret);/**ABJKPS */
+// EXERCICE 7 
+const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+names.sort();
+let secret = '';
+for(let x of names)
+{
+    secret += x[0]
+}
+console.log(secret);
