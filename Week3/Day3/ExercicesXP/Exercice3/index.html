@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+        #target {
+          width: 200px;
+          height: 200px;
+          position: relative;
+          background: yellow;
+        }
+        #box {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          left: 70px;;
+          background-color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="target" ondrop="dragDrop(event)"
+        ondragover="allowDrop(event)"
+        ondragenter="allowEnter(event)"
+        ondragleave="allowLeave(event)"></div>
+        <br>
+        <div id="box" draggable="true" ondragstart="dragStart(event)"></div>
+        <script src="script.js"></script>
+    </body>
+    </html>
