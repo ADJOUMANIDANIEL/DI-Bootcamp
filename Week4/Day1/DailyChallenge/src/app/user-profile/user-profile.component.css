@@ -1,0 +1,11 @@
+#profil {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.img-profil {
+    height: 300px;
+    width: 300px;;
+}
