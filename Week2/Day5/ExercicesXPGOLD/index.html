@@ -1,0 +1,42 @@
+
+ <html> 
+   <head> 
+      <link rel="stylesheet" href="style.css">
+      <title>calculatrice</title>
+   </head> 
+   <body> 
+      <table border="1" > 
+         <tr> 
+            <td colspan="10px"><input id="output"/></td>   
+         <tr> 
+          <td><button id="number" onclick="number('0')">0</button></td> 
+            <td><button id="number" onclick="number('1')">1</button></td> 
+            <td><button id="number" onclick="number('2')">2</button></td> 
+            <td><button id="number" onclick="number('3')">3</button></td>    
+         </tr> 
+         <tr> 
+          <td><button id="number" onclick="number('4')">4</button></td> 
+            <td><button id="number" onclick="number('5')">5</button></td> 
+            <td><button id="number"  onclick="number('6')">6</button></td> 
+            <td><button id="number" onclick="number('7')">7</button></td>  
+         </tr> 
+         <tr> 
+           <td><button  id="number" onclick="number('8')">8</button></td> 
+            <td><button id="number" onclick="number('9')">9</button></td> 
+            <td><button class=" operator" onclick="operator('.')">.</button></td> 
+            <td><button  class=" operator" onclick="operator('+')">+</button></td> 
+         </tr> 
+         <tr>
+            <td><button  class=" operator" onclick="operator('-')">-</button></td> 
+            <td><button   class=" operator" onclick="operator('*')">*</button></td> 
+            <td><button class=" operator" onclick="operator('/')">/</button></td>
+            <td><button class=" equal" onclick="equal()">=</button></td> 
+         </tr> 
+         <tr>
+      </table> 
+      <script src="script.js"></script>
+   </body> 
+</html>
+
+
+

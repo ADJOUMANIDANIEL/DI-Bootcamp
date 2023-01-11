@@ -1,0 +1,21 @@
+
+  #number{
+    background-color: green;
+  }
+  .operator{
+    background-color: orange;
+  }
+  td {width:1px}
+  button {
+  width:70px;
+  height:70px;
+}
+#output{
+  width: 300px ;
+  height: 50px;
+  color: gray;
+
+}
+.equal{
+  background-color:rgb(155, 142, 142);
+}
