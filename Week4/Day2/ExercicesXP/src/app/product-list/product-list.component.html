@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let product of products" 
+        [appHighlight]="product.price" 
+        [ngClass]="product.price > 300 ? 'high-price' : 'low-price' " >
+        Product name: <span appBold>{{ product.name }}</span> - price: {{ product.price }}
+    </li>
+</ul>
