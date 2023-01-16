@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let item of items">
+        <input type="checkbox" [(ngModel)]="item.check" name="" id="">
+        <label for="product name" appAddCustomEvent appAddCustomAttribute appAddCustomStyle appAddCustomStyle *ngIf="item.check==true?'appToogleVisibility':''">{{item.label}}</label>
+    </li>
+</ul>
+<p >Is normal one</p>
