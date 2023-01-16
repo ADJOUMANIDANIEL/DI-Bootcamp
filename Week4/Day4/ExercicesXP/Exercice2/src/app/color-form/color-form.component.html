@@ -1,0 +1,5 @@
+<form #f="ngForm" (ngSubmit)="submit()">
+    <input type="text" [(ngModel)]="favoriteColor"name="favoriteColor" placeholder="Enter your favorite color">
+    <button type="submit">Submit</button>
+  </form>
+  <div *ngIf="displayColor">Your favorite color is {{ displayColor }}</div>

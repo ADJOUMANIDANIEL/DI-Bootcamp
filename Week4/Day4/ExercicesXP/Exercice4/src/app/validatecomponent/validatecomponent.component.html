@@ -1,0 +1,8 @@
+<form #form="ngForm">
+    <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" ngModel>
+    <div *ngIf="form.submitted && form.controls[email].errors">
+      <div *ngIf="form.controls[email].errors">Invalid email format</div>
+    </div>
+    <button type="submit" (click)="submitForm(form)">Submit</button>
+</form>
+  
