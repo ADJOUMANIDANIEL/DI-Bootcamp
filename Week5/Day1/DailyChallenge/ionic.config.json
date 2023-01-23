@@ -1,0 +1,7 @@
+{
+  "name": "start-api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

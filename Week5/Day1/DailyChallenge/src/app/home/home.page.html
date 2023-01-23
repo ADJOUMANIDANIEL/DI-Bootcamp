@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Daily Challenge</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-list>
+      <ion-item *ngFor="let film of films" >
+        <ion-card>
+          <ion-card-header> Title : {{ film.getTitle() }}</ion-card-header>
+          <ion-card-title> Eps N° :{{ film.getEpisodeId() }}</ion-card-title>
+          <ion-card-subtitle>Director : {{ film.getDirector() }}</ion-card-subtitle>
+          <ion-card-content>{{ film.getOpeningCrawl() }}</ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
