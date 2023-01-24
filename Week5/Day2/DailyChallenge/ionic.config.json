@@ -1,0 +1,7 @@
+{
+  "name": "projest_Daily",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
