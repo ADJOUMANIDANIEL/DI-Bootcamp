@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h1>Liste des fims</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>CODE</th>
+          <th>TITRE</th>
+          <th>DESCRIPTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of posts">
+          <th>{{ item.id }}</th>
+          <td>{{ item.title }}</td>
+          <td>{{ item.body }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>
