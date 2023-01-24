@@ -1,0 +1,7 @@
+<h1>Page principale</h1>
+
+<a [routerLink]="['/shop']" routerLinkActive="router-link-active" >Go to</a>
+
+<div *ngIf="loading" class="spinner"></div>
+
+<router-outlet></router-outlet>
