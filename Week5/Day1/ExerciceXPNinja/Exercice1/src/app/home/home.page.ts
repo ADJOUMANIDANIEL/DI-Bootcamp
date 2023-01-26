@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicRestService } from '../ionic-rest.service';
+import { ApiService } from '../service/api.service';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +7,15 @@ import { IonicRestService } from '../ionic-rest.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-posts:any;
-  constructor(private service:IonicRestService) {}
+
+  users:any;
+  constructor(private service:ApiService) {}
   ngOnInit(){
-    this.service.fetchData()
+    this.service.getUsers()
     .subscribe(response => {
-      this.posts = response;
+      this.users = response;
     });   
+     console.table(this.users);
      
   }
 }

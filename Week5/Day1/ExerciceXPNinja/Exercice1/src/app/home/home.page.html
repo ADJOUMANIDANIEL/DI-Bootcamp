@@ -1,0 +1,42 @@
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Daily Challenge</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <h1>Liste des Users</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>CODE</th>
+          <th>Name</th>
+          <th>UserName</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Website</th>
+          <th>company Name</th>
+          <th>company catchPhrase</th>
+          <th>company Bs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let elt of users">
+          <th>{{ elt.id }}</th>
+          <td>{{ elt.name }}</td>
+          <td>{{ elt.username }}</td>
+          <td>{{ elt.email }}</td>
+          <td>{{ elt.phone }}</td>
+          <td>{{ elt.website}}</td>
+          <td>{{ elt.company.name}}</td>
+          <td>{{ elt.company.catchPhrase}}</td>
+          <td>{{ elt.company.bs}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</ion-content>
+
