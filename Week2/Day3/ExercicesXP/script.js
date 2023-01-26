@@ -1,78 +1,63 @@
-// EXERCICE1 
-// Part I - Review about arrays
+/*------------------------Exercise 1 : List Of People------------------------------------*/
+
+// Part I - Review About Arrays
+
 const people = ["Greg", "Mary", "Devon", "James"];
 
-//1) Write code to remove “Greg” from the people array.
-people.splice(0, 1);
-console.log(people);
+people.shift();
+people[2] = "Jason";
+people.push("Tia");
+console.log(`L'index de "Mary" est : ${people.indexOf("Mary")}`);
+peopleNew = people.slice(1);
+console.log(`L'index de "Foo" est :${people.indexOf("Foo")} car "Foo" n'est pas dans le tableau`);
+let last = people[people.length -1];
+console.log(last);
 
-//2) Write code to replace “James” to “Jason”
-people[2]="Jason";
-console.log(people);
+// Part II - Loops
 
-//3) Write code to add your name to the end of the people array.
-people.push("Marlin's");
-console.log(people);
+// 1. Using a loop, iterate through the people
+people.forEach(element => console.log(element))
 
-//4) Write code that console.logs Mary’s index
-people.indexOf('Mary');
-console.log(people.indexOf('Mary'));
-
-// 5)
-people.slice(1);
-console.log(people.slice(1));
-
-//6) Write code that gives the index of “Foo”.
-people.indexOf("Foo");
-console.log(people.indexOf("Foo"));
-
-//7) Create a variable called last which value is the last element of the array.
-let last = people[2];
-    console.log(last);
-    // the relationship between the index of the last element of the array and the length of the array
-    // Array.length == index.length + 1
-
-    // PART II - LOOPS
-
-//1- Using a loop, iterate through the people array and console.log each person.
-for(let i = 0; i < people.length; i++)
-{
-    console.log(people[i] + "\n");
-}
-
-//2- Using a loop, iterate through the people array and exit the loop after you console.log “Jason”
-for(let i = 0; i < people.length; i++)
-{
-    if (people[i] == "Jason") {
+// 2.Using a loop, iterate through the people array and exit the loop after you console.log “Jason” .
+for (let i = 0; i < people.length; i++) {
+    console.log(people[i])
+    if(people[i] == "Jason"){
         break;
     }
-    console.log(people[i] + "\n");
 }
 
-// EXERCICE 2 
-const colors = ["green", "blue", "yellow", "red", "orange"];
-for(let color in colors)
-{
-    console.log(`My ${Number(color) + 1} is ${colors[color]}`);
+/*----------------------------Exercise 2 : Your Favorite Colors--------------------------*/
+
+// 1.Create an array called colors
+const colors = ["red", "yellow", "blue", "green"];
+
+// 2. Loop through the array and as you loop console.log a string
+for (let i = 0; i < colors.length; i++) {
+    console.log(`My #${i+1} choice is ${colors[i]}`);
+}
+// 3. Bonus
+const valIn = ["1st", "2nd", "3rd", "4th"];
+for (let i = 0; i < valIn.length; i++) {
+    console.log(`My ${valIn[i]} choice is ${colors[i]}`);
 }
 
-// EXERCICE 3 
+/*--------------------------Exercise 3 : Repeat The Question----------------------------*/
 
-let checker = true;
-while(checker)
-{
-    entry = prompt('Entrer un nombre');
-    type = typeof(entry);
-    console.log(type);
-    number = Number(entry);
-    if(!isNaN(number) && number > 10 )
-    {
-        break
+// 1. Prompt the user for a number.
+let userNumber = prompt("Entrez un numero: ");
+console.log(`Le type de l'entrée est : ${typeof(userNumber)}`)
+
+// 2. While the number is smaller than 10 continue asking 
+while (userNumber < 10) {
+    userNumber = prompt("Entrez un autre nombre");
+    if (userNumber > 10){
+        alert(`Superbe votre nombre n° ${userNumber} > 10  est !!!`);
     }
 }
 
-// EXERCICE 4
-// 1) 
+/*-----------------------Exercise 4 : Building Management---------------------*/
+
+// 1. Copy and paste the above object to your Javascript file.
 const building = {
     numberOfFloors: 4,
     numberOfAptByFloor: {
@@ -89,63 +74,72 @@ const building = {
     },
 }
 
-//2) Console.log the number of floors in the building.
-console.log(building.numberOfFloors);
+// 2. Console.log the number of floors in the building.
+console.log(`Le nombre d'étage est : ${building.numberOfFloors}`)
 
-//3) Console.log how many apartments are on the floors 1 and 3.
-console.log(building.numberOfAptByFloor.firstFloor);
-console.log(building.numberOfAptByFloor.thirdFloor);
+// 3. Console.log how many apartments are on the floors 1 and 3.
+console.log(`Le nombre d'appartement à l'étage 1 est : ${building.numberOfAptByFloor.firstFloor}`)
+console.log(`Le nombre d'appartement à l'étage 3 est : ${building.numberOfAptByFloor.thirdFloor}`)
 
-//4) Console.log the name of the second tenant and the number of rooms he has in his apartment.
-console.log(building.nameOfTenants[1]);
+// 4. Console.log the name of the second tenant and the number of rooms he has in his apartment.
+console.log(`Le nom du deuxième locataire est : ${building.nameOfTenants[1]}
+Le nombre de pièce de son appartement est : ${building.numberOfRoomsAndRent.dan[0]}`)
 
-//5) Check if the sum of Sarah’s and David’s rent is bigger than Dan’s rent. If it is, than increase Dan’s rent to 1200.
- sarahAndDavidRent = building.numberOfRoomsAndRent.sarah[1] + building.numberOfRoomsAndRent.david[1];
- danRent = building.numberOfRoomsAndRent.dan[1];
- if (sarahAndDavidRent > danRent) {
-    danRent += 1200
+// 5. Check if the sum of Sarah’s and David’s rent is bigger than Dan’s rent. If it is, than increase Dan’s rent to 1200.
+verifyRent = building.numberOfRoomsAndRent.sarah[1] + building.numberOfRoomsAndRent.david[1];
+if ( verifyRent > building.numberOfRoomsAndRent.dan[1]){
+    newRent = building.numberOfRoomsAndRent.dan[1] + 200
+    console.log(`Le loyer de Dan passe à : ${newRent}`)
 }
 
-// EXERCICE 5 
-//1) Create an object called family with a few key value pairs.
+/*----------------------------Exercise 5 : Family---------------------------------*/
+
+// 1. Create an object called family with a few key value pairs.
 const family = {
-    firstName : "KONE",
-    lastName : "ISMAEL"
+    firstChild: 'Tia',
+    secondChild: 'Ange',
+    thirdChild: 'Gompou'
 }
 
-//2) Using a for in loop, console.log the keys of the object.
-for(let elt in family)
-{
-    console.log(elt);
+// 2. Using a for in loop, console.log the keys of the object.
+for (const property in family) {
+    // Les clés de la classe "family"
+    console.log(`${property}`)
 }
 
-//3) Using a for in loop, console.log the values of the object
-for(let elt in family)
-{
-    console.log(family[elt]);
+// 3. Using a for in loop, console.log the values of the object.
+for (const property in family){
+    // Les valeurs des clés
+    console.log(`${family[property]}`)
 }
 
-// EXERCICE 6 
+/*--------------------------Exercise 6 : Rudolf----------------------------------*/
+
 const details = {
     my: 'name',
     is: 'Rudolf',
     the: 'raindeer'
+  }
+
+let newDetail = Object.entries(details) 
+// 1. Given the object above and using a for loop, console.log “my name is Rudolf the raindeer”
+for (let i=0; i< newDetail.length; i++) {
+    for (let j=0; j< newDetail[i].length;j++){
+        console.log(newDetail[i][j])
+    }
 }
 
-//1) Given the object above and using a for loop, console.log “my name is Rudolf the raindeer”
-let text = "";
-for(let detail in details)
-{
-    text += detail + ' ' + details[detail] + ' ';
-}
-console.log(text);
+/*-------------------------Exercise 7 : Secret Group--------------------------------*
 
-// EXERCICE 7 
+A group of friends have decided to start a secret society. The society’s name will be the first letter of each of their names sorted in alphabetical order.
+Hint: a string is an array of letters
+Console.log the name of their secret society. The output should be “ABJKPS”*/
+
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+
 names.sort();
-let secret = '';
-for(let x of names)
-{
-    secret += x[0]
+// firtsIndex = `The society name's : ${names[0][0]}${names[1][0]}${names[2][0]}${names[3][0]}${names[4][0]}${names[5][0]}` ();
+for (const name in names) {
+    let valueNew = (names[name][0]);
 }
-console.log(secret);
+console.log(valueNew);
